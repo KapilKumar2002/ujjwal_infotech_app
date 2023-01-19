@@ -58,9 +58,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         ),
                         addVerticalSpace(60),
                         CustomTextField(
-                          hint: "Mobile Number",
+                          hintText: "+91 88888 88888",
+                          labelText: "Mobile Number",
                           icon: "assets/phone.png",
-                          hide: false,
                         ),
                       ],
                     ),

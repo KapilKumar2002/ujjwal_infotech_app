@@ -58,16 +58,17 @@ class _LogInState extends State<LogIn> {
                           ),
                         ),
                         CustomTextField(
-                          hint: "Mobile Number",
+                          hintText: "+91 913 388 38 83",
+                          labelText: "Mobile Number",
                           icon: "assets/phone.png",
-                          hide: false,
                         ),
                         addVerticalSpace(15),
                         CustomTextField(
-                          hint: "Password",
-                          obscureCharacter: "*",
+                          hintText: "********",
+                          labelText: "Password",
                           icon: "assets/key.png",
-                          hide: true,
+                          obscureCharacter: "*",
+                          obscureText: true,
                         ),
                         addVerticalSpace(8),
                         GestureDetector(

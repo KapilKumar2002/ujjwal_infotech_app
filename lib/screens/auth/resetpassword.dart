@@ -43,15 +43,14 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         ),
                       ),
                       CustomTextField(
-                        hint: "Enter new Password",
+                        labelText: "*********",
+                        hintText: "Enter new Password",
                         icon: "assets/key.png",
-                        hide: true,
                       ),
                       addVerticalSpace(15),
                       CustomTextField(
-                        hint: "Confirm Password",
+                        hintText: "Confirm Password",
                         icon: "assets/key.png",
-                        hide: true,
                       ),
                     ],
                   ),

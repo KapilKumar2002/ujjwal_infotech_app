@@ -57,7 +57,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                 ),
                 addVerticalSpace(25),
                 Container(
-                  height: 92,
+                  height: 80,
                   decoration: shadowDecoration(25, 2),
                   child: Center(
                     child: ListTile(
@@ -82,7 +82,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                 ),
                 addVerticalSpace(20),
                 Container(
-                  height: 92,
+                  height: 80,
                   decoration: shadowDecoration(25, 2),
                   child: Center(
                     child: ListTile(
@@ -109,7 +109,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                 Stack(
                   children: [
                     Container(
-                      height: 92,
+                      height: 80,
                       decoration: shadowDecoration(25, 2),
                       child: Center(
                         child: ListTile(

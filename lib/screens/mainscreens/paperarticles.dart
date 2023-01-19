@@ -65,7 +65,7 @@ class _PaperArticlesScreenState extends State<PaperArticlesScreen> {
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 20,
-                          childAspectRatio: width(context) * .415 / 80,
+                          childAspectRatio: width(context) * .45 / 80,
                           crossAxisCount: 2),
                       itemBuilder: (context, index) {
                         return InkWell(

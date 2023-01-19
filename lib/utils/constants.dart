@@ -124,6 +124,12 @@ TextStyle bodyText12normal({
   return TextStyle(color: color, fontSize: 12);
 }
 
+TextStyle bodyText11w400({
+  required Color color,
+}) {
+  return TextStyle(color: color, fontSize: 11, fontWeight: FontWeight.w400);
+}
+
 TextStyle bodyText15normal({
   required Color color,
 }) {

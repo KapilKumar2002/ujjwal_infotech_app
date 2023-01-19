@@ -4,9 +4,8 @@ import 'package:ujjwal_infotech_app/widgets/custombackground.dart';
 import 'package:ujjwal_infotech_app/widgets/custombutton.dart';
 import 'package:ujjwal_infotech_app/widgets/customdrawer.dart';
 import 'package:ujjwal_infotech_app/widgets/customsearchbox.dart';
-import 'package:ujjwal_infotech_app/widgets/customtextfield.dart';
-import 'package:ujjwal_infotech_app/widgets/noticetextfield.dart';
 import 'package:ujjwal_infotech_app/widgets/publicnoticedetaildata.dart';
+import 'package:ujjwal_infotech_app/widgets/textfield.dart';
 
 class AddNewNoticeScreen extends StatefulWidget {
   const AddNewNoticeScreen({super.key});
@@ -65,33 +64,20 @@ class _AddNewNoticeScreenState extends State<AddNewNoticeScreen> {
                         ),
                       )
                     : addVerticalSpace(0),
-                NoticeTextField(hint: "Date"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Newspaper"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Type"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Property"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Village/City"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Taluka"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "District"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "SR/Plot/Section"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Area"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Flat details"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Advocate"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Days"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Lapse date"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Query"),
+                textField(labelText: "Date", hintText: "01.01.2002"),
+                textField(labelText: "Newspaper", hintText: "Kesari"),
+                textField(labelText: "Type", hintText: "Title Verification"),
+                textField(labelText: "Property", hintText: "Land"),
+                textField(labelText: "Village/City", hintText: "Talawade-Pune"),
+                textField(labelText: "Taluka", hintText: "Haveli"),
+                textField(labelText: "District", hintText: "Pune"),
+                textField(labelText: "SR/Plot/Section", hintText: "167"),
+                textField(labelText: "Area", hintText: "5acres"),
+                textField(labelText: "Flat details", hintText: "-"),
+                textField(labelText: "Advocate", hintText: "ABC"),
+                textField(labelText: "Days", hintText: "30"),
+                textField(labelText: "Lapse date", hintText: "01.02.2022"),
+                textField(labelText: "Query", hintText: "Please Check"),
                 addVerticalSpace(20),
                 _isSubmitted
                     ? addVerticalSpace(0)

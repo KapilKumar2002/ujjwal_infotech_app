@@ -3,8 +3,8 @@ import 'package:ujjwal_infotech_app/utils/constants.dart';
 import 'package:ujjwal_infotech_app/widgets/custombackground.dart';
 import 'package:ujjwal_infotech_app/widgets/custombutton.dart';
 import 'package:ujjwal_infotech_app/widgets/customsearchbox.dart';
-import 'package:ujjwal_infotech_app/widgets/noticetextfield.dart';
 import 'package:ujjwal_infotech_app/widgets/papercutouttable.dart';
+import 'package:ujjwal_infotech_app/widgets/textfield.dart';
 
 class AddNewPaperCutout extends StatefulWidget {
   const AddNewPaperCutout({super.key});
@@ -56,17 +56,14 @@ class _AddNewPaperCutoutState extends State<AddNewPaperCutout> {
                         ),
                       )
                     : addVerticalSpace(0),
-                NoticeTextField(hint: "Date"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "NewsPaper"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Topic"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Subject"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Remark"),
-                addVerticalSpace(15),
-                NoticeTextField(hint: "Attach file /photo"),
+                textField(labelText: "Date", hintText: "01.01.2022"),
+                textField(labelText: "Newspaper", hintText: "Kesari"),
+                textField(labelText: "Topic", hintText: "RERA"),
+                textField(labelText: "Subject", hintText: "Real Estate"),
+                textField(labelText: "Remark", hintText: "Please Check"),
+                textField(
+                    labelText: "Attach file /photo",
+                    hintText: "Attach (png,jpg,pdf)"),
                 addVerticalSpace(15),
                 _isSubmitted
                     ? addVerticalSpace(0)

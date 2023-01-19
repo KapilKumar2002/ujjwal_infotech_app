@@ -49,31 +49,32 @@ class _SignUpState extends State<SignUp> {
                 Column(
                   children: [
                     CustomTextField(
-                      hint: "Name",
+                      labelText: "Name",
+                      hintText: "Anakin Skywalker",
                       icon: "assets/person.png",
-                      hide: false,
                     ),
                     addVerticalSpace(15),
                     SelectCategoryWidget(
                         hint: "Select category", icon: "assets/briefcase.png"),
                     addVerticalSpace(15),
                     CustomTextField(
-                      hint: "Mobile Number",
+                      hintText: "+91 88888 88888",
+                      labelText: "Mobile Number",
                       icon: "assets/phone.png",
-                      hide: false,
                     ),
                     addVerticalSpace(15),
                     CustomTextField(
-                      hint: "Email",
+                      hintText: "email@gmail.com",
+                      labelText: "Email",
                       icon: "assets/mail.png",
-                      hide: false,
                     ),
                     addVerticalSpace(15),
                     CustomTextField(
-                      hint: "Password",
+                      hintText: "********",
+                      labelText: "Password",
                       icon: "assets/key.png",
-                      hide: true,
                       obscureCharacter: "*",
+                      obscureText: true,
                     ),
                   ],
                 ),

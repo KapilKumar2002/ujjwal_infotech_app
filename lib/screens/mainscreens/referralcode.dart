@@ -49,10 +49,12 @@ class _EnterReferralCodeScreenState extends State<EnterReferralCodeScreen> {
                       ),
                       addVerticalSpace(25),
                       CustomTextField(
-                          hint: "Enter referral code",
-                          icon: "assets/key.png",
-                          obscureCharacter: "x",
-                          hide: true),
+                        hintText: "XXXXX XXXXX",
+                        labelText: "Enter referral code",
+                        icon: "assets/key.png",
+                        obscureCharacter: "x",
+                        obscureText: true,
+                      ),
                     ],
                   ),
                   Column(

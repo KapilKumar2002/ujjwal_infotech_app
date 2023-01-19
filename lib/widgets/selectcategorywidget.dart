@@ -24,13 +24,13 @@ class _SelectCategoryWidgetState extends State<SelectCategoryWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: width(context),
-      height: isDown ? 74 : 275,
+      height: isDown ? height(context) * 0.085 : 255,
       decoration: shadowDecoration(25, 2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Container(
-            height: 74,
+            height: height(context) * 0.085,
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -43,7 +43,7 @@ class _SelectCategoryWidgetState extends State<SelectCategoryWidget> {
                     children: [
                       Image.asset(widget.icon),
                       addHorizontalySpace(15),
-                      verticalDivider(1, 50),
+                      verticalDivider(1, 40),
                     ],
                   ),
                 ),
@@ -55,9 +55,10 @@ class _SelectCategoryWidgetState extends State<SelectCategoryWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      addVerticalSpace(7),
                       Text(
                         widget.hint,
-                        style: bodyText14w400(color: gray),
+                        style: bodyText11w400(color: gray),
                       ),
                       InkWell(
                         onTap: () {

@@ -49,19 +49,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         NextScreen(context, PublicNoticeDetailScreen());
                       },
-                      child: CustomButton(text: "Public Notice", height: 80)),
+                      child: CustomButton(text: "Public Notice", height: 75)),
                   addVerticalSpace(25),
                   GestureDetector(
                       onTap: () {
                         NextScreen(context, PaperArticlesScreen());
                       },
-                      child: CustomButton(text: "Paper Articles", height: 80)),
+                      child: CustomButton(text: "Paper Articles", height: 75)),
                   addVerticalSpace(25),
                   GestureDetector(
                       onTap: () {
                         NextScreen(context, GRScreen());
                       },
-                      child: CustomButton(text: "GR", height: 80)),
+                      child: CustomButton(text: "GR", height: 75)),
                 ],
               ),
             ),
