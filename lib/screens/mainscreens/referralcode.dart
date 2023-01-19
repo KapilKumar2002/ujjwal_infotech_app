@@ -29,7 +29,7 @@ class _EnterReferralCodeScreenState extends State<EnterReferralCodeScreen> {
                 children: [
                   Column(
                     children: [
-                      addVerticalSpace(25),
+                      addVerticalSpace(20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

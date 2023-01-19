@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:ujjwal_infotech_app/screens/auth/resetsuccess.dart';
 import 'package:ujjwal_infotech_app/screens/auth/verifycode.dart';
 import 'package:ujjwal_infotech_app/utils/constants.dart';
 import 'package:ujjwal_infotech_app/widgets/custombackground.dart';
@@ -29,7 +32,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top: 30, bottom: 15),
+                          padding: const EdgeInsets.only(top: 20, bottom: 15),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

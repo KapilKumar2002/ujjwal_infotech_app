@@ -1,7 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:pinput/pinput.dart';
+import 'package:ujjwal_infotech_app/screens/auth/resetsuccess.dart';
 import 'package:ujjwal_infotech_app/utils/constants.dart';
+import 'package:ujjwal_infotech_app/widgets/custombackground.dart';
+import 'package:ujjwal_infotech_app/widgets/nextscreen.dart';
 
 class CodeVerificationScreen extends StatefulWidget {
   const CodeVerificationScreen({super.key});
@@ -23,75 +28,87 @@ class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
     )),
   );
   String? otp;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    Timer(
+        Duration(seconds: 2), () => NextScreen(context, ResetSuccessScreen()));
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-            height: height(context),
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 30, bottom: 15),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Verification",
-                              style: bodyText26w600(color: appColor),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                Navigator.pop(context);
-                              },
-                              child: Icon(
-                                Icons.close,
-                                size: 35,
+        child: CustomBackground(
+          child: SingleChildScrollView(
+            child: Container(
+              height: height(context),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30, bottom: 15),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Verification",
+                                style: bodyText26w600(color: appColor),
                               ),
-                            )
-                          ],
+                              InkWell(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Icon(
+                                  Icons.close,
+                                  size: 35,
+                                ),
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                      Text(
-                        "Enter a 4 digit verification code sent to the\nregistered mobile number",
-                        style: bodyText14w600(color: black),
-                      ),
-                      addVerticalSpace(50),
-                      Center(
-                        child: Text(
-                          "Code expires in 01:59",
-                          style: bodyText14w400(color: gray),
+                        Text(
+                          "Enter a 4 digit verification code sent to the\nregistered mobile number",
+                          style: bodyText14w600(color: black),
                         ),
-                      ),
-                      addVerticalSpace(40),
-                      Center(
-                        child: Pinput(
-                          key: key,
-                          validator: MultiValidator([
-                            RequiredValidator(errorText: "Otp is not correct"),
-                            MinLengthValidator(6,
-                                errorText: "Please enter correct otp"),
-                          ]),
-                          length: 4,
-                          defaultPinTheme: defaultPinTheme,
-                          controller: _pinPutController,
-                          pinAnimationType: PinAnimationType.fade,
-                          onChanged: (value) {
-                            setState(() {
-                              otp = value;
-                            });
-                          },
+                        addVerticalSpace(50),
+                        Center(
+                          child: Text(
+                            "Code expires in 01:59",
+                            style: bodyText14w400(color: gray),
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ]),
+                        addVerticalSpace(40),
+                        Center(
+                          child: Pinput(
+                            key: key,
+                            validator: MultiValidator([
+                              RequiredValidator(
+                                  errorText: "Otp is not correct"),
+                              MinLengthValidator(6,
+                                  errorText: "Please enter correct otp"),
+                            ]),
+                            length: 4,
+                            defaultPinTheme: defaultPinTheme,
+                            controller: _pinPutController,
+                            pinAnimationType: PinAnimationType.fade,
+                            onChanged: (value) {
+                              setState(() {
+                                otp = value;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+            ),
           ),
         ),
       ),

@@ -26,7 +26,7 @@ class _SignUpState extends State<SignUp> {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Column(children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 25),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

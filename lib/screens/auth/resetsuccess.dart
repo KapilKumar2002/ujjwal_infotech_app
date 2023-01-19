@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ujjwal_infotech_app/screens/auth/login.dart';
 import 'package:ujjwal_infotech_app/utils/constants.dart';
+import 'package:ujjwal_infotech_app/widgets/custombackground.dart';
 import 'package:ujjwal_infotech_app/widgets/custombutton.dart';
+import 'package:ujjwal_infotech_app/widgets/nextscreen.dart';
 
 class ResetSuccessScreen extends StatefulWidget {
   const ResetSuccessScreen({super.key});
@@ -14,39 +17,46 @@ class _ResetSuccessScreenState extends State<ResetSuccessScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          height: height(context),
-          width: width(context),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 200),
-                child: Column(
-                  children: [
-                    Image.asset("assets/verified.png"),
-                    addVerticalSpace(5),
-                    Text(
-                      "Congratulations!",
-                      style: bodyText20w600(color: black),
-                    ),
-                    addVerticalSpace(5),
-                    Text(
-                      "Password reset successfully!",
-                      style: bodyText14w400(color: black),
-                    ),
-                  ],
+        child: CustomBackground(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            height: height(context),
+            width: width(context),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 200),
+                  child: Column(
+                    children: [
+                      Image.asset("assets/verified.png"),
+                      addVerticalSpace(5),
+                      Text(
+                        "Congratulations!",
+                        style: bodyText20w600(color: black),
+                      ),
+                      addVerticalSpace(5),
+                      Text(
+                        "Password reset successfully!",
+                        style: bodyText14w400(color: black),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: CustomButton(
-                  text: "Next",
-                  height: 53,
-                ),
-              )
-            ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: InkWell(
+                    onTap: () {
+                      NextScreen(context, LogIn());
+                    },
+                    child: CustomButton(
+                      text: "Next",
+                      height: 53,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ujjwal_infotech_app/screens/myprofile/profileupdate.dart';
 import 'package:ujjwal_infotech_app/utils/constants.dart';
 import 'package:ujjwal_infotech_app/widgets/custombackground.dart';
 import 'package:ujjwal_infotech_app/widgets/custombutton.dart';
 import 'package:ujjwal_infotech_app/widgets/customtextfield.dart';
+import 'package:ujjwal_infotech_app/widgets/nextscreen.dart';
 import 'package:ujjwal_infotech_app/widgets/selectcategorywidget.dart';
 
 class CreateProfile extends StatefulWidget {
@@ -72,9 +74,14 @@ class _CreateProfileState extends State<CreateProfile> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20, top: 120),
-                  child: CustomButton(
-                    text: "Save",
-                    height: 53,
+                  child: InkWell(
+                    onTap: () {
+                      NextScreen(context, ProfileUpdateScreen());
+                    },
+                    child: CustomButton(
+                      text: "Save",
+                      height: 53,
+                    ),
                   ),
                 ),
               ]),
