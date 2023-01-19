@@ -45,8 +45,16 @@ class _CustomerCareScreenState extends State<CustomerCareScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset("assets/logo.png"),
-                  Image.asset("assets/logo2.png"),
+                  Image.asset(
+                    "assets/logo.png",
+                    height: 120,
+                    width: 120,
+                  ),
+                  Image.asset(
+                    "assets/logo2.png",
+                    height: 124,
+                    width: 120,
+                  ),
                 ],
               ),
               addVerticalSpace(25),

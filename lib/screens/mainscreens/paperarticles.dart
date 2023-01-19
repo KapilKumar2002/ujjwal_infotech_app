@@ -30,52 +30,54 @@ class _PaperArticlesScreenState extends State<PaperArticlesScreen> {
       drawer: CustomDrawer(),
       body: SafeArea(
         child: CustomBackground(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              children: [
-                addVerticalSpace(25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                        onTap: () {
-                          _globalKey.currentState!.openDrawer();
-                        },
-                        child: Image.asset("assets/menu.png")),
-                    Text(
-                      "Paper articles",
-                      style: bodyText16w600(color: black),
-                    ),
-                    IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(
-                          Icons.close,
-                          size: 35,
-                        ))
-                  ],
-                ),
-                addVerticalSpace(75),
-                GridView.builder(
-                    shrinkWrap: true,
-                    itemCount: paperArticles.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisSpacing: 20,
-                        mainAxisSpacing: 20,
-                        childAspectRatio: width(context) * .415 / 80,
-                        crossAxisCount: 2),
-                    itemBuilder: (context, index) {
-                      return InkWell(
-                        onTap: () {
-                          NextScreen(context, PaperArticlesDataScreen());
-                        },
-                        child: CustomButton(
-                            text: paperArticles[index]['title'], height: 80),
-                      );
-                    })
-              ],
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [
+                  addVerticalSpace(25),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                          onTap: () {
+                            _globalKey.currentState!.openDrawer();
+                          },
+                          child: Image.asset("assets/menu.png")),
+                      Text(
+                        "Paper articles",
+                        style: bodyText16w600(color: black),
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: Icon(
+                            Icons.close,
+                            size: 35,
+                          ))
+                    ],
+                  ),
+                  addVerticalSpace(75),
+                  GridView.builder(
+                      shrinkWrap: true,
+                      itemCount: paperArticles.length,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisSpacing: 20,
+                          mainAxisSpacing: 20,
+                          childAspectRatio: width(context) * .415 / 80,
+                          crossAxisCount: 2),
+                      itemBuilder: (context, index) {
+                        return InkWell(
+                          onTap: () {
+                            NextScreen(context, PaperArticlesDataScreen());
+                          },
+                          child: CustomButton(
+                              text: paperArticles[index]['title'], height: 80),
+                        );
+                      })
+                ],
+              ),
             ),
           ),
         ),

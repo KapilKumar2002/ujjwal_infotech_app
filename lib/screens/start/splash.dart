@@ -13,15 +13,15 @@ class SpalshScreen extends StatefulWidget {
 }
 
 class _SpalshScreenState extends State<SpalshScreen> {
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   Timer(
-  //       Duration(seconds: 4),
-  //       () => Navigator.push(
-  //           context, MaterialPageRoute(builder: (context) => SignUp())));
-  //   super.initState();
-  // }
+  @override
+  void initState() {
+    // TODO: implement initState
+    Timer(
+        Duration(seconds: 4),
+        () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => SignUp())));
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,25 +33,27 @@ class _SpalshScreenState extends State<SpalshScreen> {
               children: [
                 Image.asset(
                   "assets/flag.png",
-                  width: 120,
+                  width: 82,
+                  height: 82,
+                  fit: BoxFit.fill,
                 ),
-                // Container(
-                //   child: Column(
-                //     children: [
-                //       Image.asset(
-                //         "assets/logo.png",
-                //         fit: BoxFit.fill,
-                //       ),
-                //       addVerticalSpace(15),
-                //       Text(
-                //         "Ujjwal legal associatess",
-                //         style: bodyText24w600(color: titleColor),
-                //       )
-                //     ],
-                //   ),
-                // ),
-                Image.asset("assets/logo.png"),
-
+                Container(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        "assets/logo.png",
+                        fit: BoxFit.fill,
+                        width: 120,
+                        height: 120,
+                      ),
+                      addVerticalSpace(15),
+                      Text(
+                        "Ujjwal legal associatess",
+                        style: bodyText24w600(color: titleColor),
+                      )
+                    ],
+                  ),
+                ),
                 Text(
                   "Version 2.3",
                   style: bodyText14normal(color: darkGray),
